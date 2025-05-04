@@ -51,6 +51,11 @@
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
     </dependency>
+    <!--引入阿里云百炼云平台-->
+    <dependency>
+      <groupId>dev.langchain4j</groupId>
+      <artifactId>langchain4j-community-dashscope-spring-boot-starter</artifactId>
+    </dependency>
   </dependencies>
 
   <dependencyManagement>
