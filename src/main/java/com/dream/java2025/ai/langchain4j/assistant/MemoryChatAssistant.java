@@ -6,13 +6,18 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 
 /**
  * @Author huzejun
- * @Date 2025-05-04 13:30
+ * @Date 2025-05-04 21:06
  **/
+
+/**
+ * 智能体
+ */
 @AiService(
         wiringMode = EXPLICIT,
-        chatModel = "qwenChatModel"
+        chatModel = "qwenChatModel",
+        chatMemory = "chatMemory"
 )
-public interface Assistant {
+public interface MemoryChatAssistant {
 
-    String chat(String userMessage);
+    String chat(String message);
 }

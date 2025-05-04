@@ -1,6 +1,7 @@
 package com.dream.java2025.ai.langchain4j;
 
 import com.dream.java2025.ai.langchain4j.assistant.Assistant;
+import com.dream.java2025.ai.langchain4j.assistant.MemoryChatAssistant;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.UserMessage;
@@ -64,9 +65,21 @@ public class ChatMemoryTest {
                 .chatMemory(chatMemory)
                 .build();
 
-        String anwser1 = assistant.chat("我是嬛嬛");
-        System.out.println(anwser1);
+        String answer1 = assistant.chat("我是嬛嬛");
+        System.out.println(answer1);
         String answer2 = assistant.chat("我是谁");
+        System.out.println(answer2);
+    }
+
+    @Autowired
+    private MemoryChatAssistant memoryChatAssistant;
+
+    @Test
+    public void testChatMemory4() {
+
+        String answer1 = memoryChatAssistant.chat("我是张三");
+        System.out.println(answer1);
+        String answer2 = memoryChatAssistant.chat("我是谁");
         System.out.println(answer2);
     }
 
