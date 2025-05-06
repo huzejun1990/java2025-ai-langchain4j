@@ -1,8 +1,10 @@
 package com.dream.java2025.ai.langchain4j.config;
 
+import com.dream.java2025.ai.langchain4j.store.MongoChatMemoryStore;
 import dev.langchain4j.memory.chat.ChatMemoryProvider;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.store.memory.chat.InMemoryChatMemoryStore;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +16,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SeparateChatAssistantConfig {
 
+    @Autowired
+    private MongoChatMemoryStore mongoChatMemoryStore;
+
 
     @Bean
     public ChatMemoryProvider chatMemoryProvider() {
@@ -22,7 +27,8 @@ public class SeparateChatAssistantConfig {
                 .builder()
                 .id(memoryId)
                 .maxMessages(10)
-                .chatMemoryStore(new InMemoryChatMemoryStore())
+//                .chatMemoryStore(new InMemoryChatMemoryStore())   //写入内存
+                .chatMemoryStore(mongoChatMemoryStore)      //写入磁盘
                 .build();
 
     }
