@@ -1,10 +1,10 @@
 package com.dream.java2025.ai.langchain4j.bean;
 
-import io.github.classgraph.json.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
