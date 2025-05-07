@@ -13,7 +13,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>3.2.6</spring-boot.version>
     <!--    <knife4j.version>4.3.0</knife4j.version>-->
-    <knife4j.version>4.4.0</knife4j.version>
+    <knife4j.version>4.3.0</knife4j.version>
+<!--    <knife4j.version>4.4.0</knife4j.version>-->
     <langchain4j.version>1.0.0-beta3</langchain4j.version>
     <mybatis-plus.version>3.5.11</mybatis-plus.version>
   </properties>
@@ -36,9 +37,16 @@
     <!--      <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
     <!--      <version>${knife4j.version}</version>-->
     <!--    </dependency>-->
+    <!-- 2025年5月7日09:09:59 -->
+<!--    <dependency>-->
+<!--      <groupId>com.github.xiaoymin</groupId>-->
+<!--      <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>-->
+<!--      <version>${knife4j.version}</version>-->
+<!--    </dependency>-->
+    <!-- Knife4j 依赖 -->
     <dependency>
       <groupId>com.github.xiaoymin</groupId>
-      <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+      <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
       <version>${knife4j.version}</version>
     </dependency>
     <!--基于open-ai的langchain4j接口：ChatGPT、deepseek都是open-ai标准下的大模型 -->
