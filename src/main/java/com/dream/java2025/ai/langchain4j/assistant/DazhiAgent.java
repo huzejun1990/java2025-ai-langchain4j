@@ -15,7 +15,8 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
         chatMemoryProvider = "chatMemoryProviderDaZhi",
-        tools = "appointmentTools"
+        tools = "appointmentTools",
+        contentRetriever = "contentRetrieverDaZhi"
 )
 public interface DazhiAgent {
 
